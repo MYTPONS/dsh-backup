@@ -1,0 +1,55 @@
+{
+  "name": "dsh-backup",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH-exclusive single-root, self-pruning snapshots for files outside version control: one backup tool, retention enforced on every call.",
+  "license": "MIT",
+  "author": "MYTPONS",
+  "icon": "icon.svg",
+  "homepage": "https://github.com/MYTPONS/dsh-backup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MYTPONS/dsh-backup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MYTPONS/dsh-backup/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "backup",
+    "snapshot",
+    "agent-tool"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check lib/store.js",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "pnpm check && pnpm test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

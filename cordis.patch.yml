@@ -1,0 +1,10 @@
+# dsh-backup bundle patch: inserts the `backup` tool row into a profile.
+- insert:
+    - id: backup
+      name: 'dsh-backup'
+      config:
+        root: ~/.local/share/backups
+        keepDays: 30
+        trashKeepDays: 30
+        maxFileMb: 50
+        autoPrune: true

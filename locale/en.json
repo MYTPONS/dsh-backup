@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Backup Store",
+    "description": "One snapshot store for files outside version control, with retention enforced on every call."
+  }
+}
